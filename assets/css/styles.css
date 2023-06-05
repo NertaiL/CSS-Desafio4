@@ -1,0 +1,363 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap");
+body {
+  margin: 0;
+}
+
+body {
+  margin: 0;
+  display: grid;
+  height: 100vh;
+  grid-template-rows: 0.5fr 1fr 5fr 0.5fr;
+  grid-template-areas:
+    "nav"
+    "menu"
+    "cars"
+    "footer";
+}
+
+/* navbar */
+nav {
+  grid-area: nav;
+  background-image: url(../img/meta1.jpg);
+  display: flex;
+  justify-content: space-between;
+}
+
+#topleft {
+  display: flex;
+  padding-left: 1rem;
+}
+
+#titulo {
+  cursor: pointer;
+}
+
+.titulo h3 {
+  background: linear-gradient(
+    158deg,
+    rgb(207, 201, 201) 50%,
+    rgb(223, 17, 17) 50%
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+}
+
+.titulo:hover{
+  cursor: pointer;
+}
+
+.topright {
+  display: flex;
+  align-items: center;
+  padding-right: 1rem;
+}
+
+.lista {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.lista a {
+  background-image: url(../img/meta1.jpg);
+  width: 5rem;
+  height: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0.6rem;
+  color: rgb(207, 201, 201);
+}
+
+.lista a:hover {
+  color: aliceblue;
+  box-shadow: 0 0 20px;
+  transition: transform 4s, ease-in-out 0.1s;
+  transform: scale(1.1);
+}
+
+/* Menu para ordernar */
+menu {
+  grid-area: menu;
+  background-color: rgb(23, 26, 25);
+  color: rgb(207, 201, 201);
+  margin: 0;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+menu img {
+  width: 150px;
+  height: 50px;
+  animation: autoleft 3.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) infinite both;
+  animation: autoleft 3.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) infinite both;
+}
+
+.automenu {
+  display: flex;
+  justify-content: end;
+}
+
+@keyframes autoleft {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100px);
+  }
+}
+
+/* .automenu{
+  animation:vehiculo 0.3s linear infinite both ;
+}
+
+@keyframes vehiculo {
+  0% {
+   transform: translate(0);
+    
+  }
+  20% {
+   transform: translate(-2px, 2px);
+    
+  }
+  40% {
+   transform: translate(-2px, -2px);
+  
+  }
+  60% {
+   transform: translate(2px, 2px);
+      
+  }
+  80% {
+   transform: translate(2px, -2px);
+     
+  }
+  100% {
+    transform: translate(0);
+            
+  }
+} */
+
+/* card */
+main {
+  grid-area: cars;
+  background-color: rgb(48, 48, 48);
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+#Clasicos {
+  cursor: pointer;
+}
+
+#Clasicos h1 {
+  background: linear-gradient(
+    158deg,
+    rgb(207, 201, 201) 50%,
+    rgb(223, 17, 17) 50%
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+}
+
+#Modernos {
+  cursor: pointer;
+}
+
+#Modernos h1 {
+  background: linear-gradient(
+    158deg,
+    rgb(207, 201, 201) 50%,
+    rgb(223, 17, 17) 50%
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+}
+
+#cajon {
+  display: grid;
+  row-gap: 1rem;
+}
+#cajon2 {
+  display: grid;
+  row-gap: 1rem;
+  padding-bottom: 1rem;
+}
+
+#card {
+  border: 3px rgb(23, 26, 25) solid;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  cursor: url(../img/favicon-32x32.png), auto;
+  row-gap: 0.5rem;
+}
+
+#card:hover {
+  color: aliceblue;
+  box-shadow: 0 0 20px;
+  transition: transform 4s, ease-in-out 0.1s;
+  transform: scale(1.1);
+}
+
+#card img {
+  width: 11rem;
+  height: 8rem;
+  border-radius: 0.6rem;
+  display: flex;
+  justify-content: center;
+  filter: grayscale(100%);
+}
+
+#card img:hover {
+  filter: grayscale(0%);
+}
+
+.text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.textsmall {
+  display: flex;
+  justify-content: center;
+}
+
+button {
+  background-image: url(../img/meta1.jpg);
+  width: 6rem;
+  height: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0.6rem;
+  color: rgb(207, 201, 201);
+}
+
+a {
+  text-decoration: none;
+}
+button:hover {
+  cursor: pointer;
+}
+
+/* footer */
+footer {
+  grid-area: footer;
+  background-image: url(../img/meta1.jpg);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: rgb(207, 201, 201);
+}
+
+.icons {
+  display: flex;
+  justify-content: center;
+  animation: hola 0.3s linear infinite both;
+}
+
+.icons1 {
+  margin-top: 0.4rem;
+}
+.icons2 {
+  margin-top: 0.4rem;
+  margin-left: 0.4rem;
+}
+
+.fa-brands {
+  text-decoration: none;
+  color: beige;
+}
+
+.text1 {
+  display: flex;
+  font-family: lato;
+}
+
+.text1:hover {
+  cursor: pointer;
+}
+
+/* Media query  min 576px*/
+@media (min-width: 576px) {
+  body {
+    display: grid;
+    grid-template-areas: "menu nav" "menu cars" "menu cars" "menu footer";
+    grid-template-columns: 15% 85%;
+    grid-template-rows: 15% auto 10%;
+  }
+  /* nav */
+  nav {
+    display: flex;
+    padding-left: 1rem;
+  }
+
+  .titulo {
+    font-family: "roboto", sans-serif;
+    font-weight: 500;
+    font-size: 25px;
+  }
+
+  .topright {
+    display: none;
+  }
+
+  menu {
+    display: flex;
+    justify-content: flex-start;
+  }
+
+  .lista {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    height: 100vh;
+  }
+
+  .lista a {
+    margin-top: 2rem;
+    padding: 0.5rem;
+    font-family: "roboto", sans-serif;
+  }
+
+  /* footer */
+  footer {
+    display: flex;
+  }
+
+  /* Cajon */
+  #cajon {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    row-gap: 0.5rem;
+    column-gap: 1rem;
+    padding-top: 1rem;
+  }
+
+  #cajon2 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    row-gap: 0.5rem;
+    column-gap: 1rem;
+    padding-top: 1rem;
+  }
+}
